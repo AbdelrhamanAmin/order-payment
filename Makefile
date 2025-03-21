@@ -31,7 +31,7 @@ local-setup: ## Setup local environment
 
 migrate: ## Run database migrations
 	$(SAIL) artisan migrate:fresh --seed;
-	$(SAIL) artisan module:seed;
+	$(SAIL) artisan db:seed
 
 clean: ## Clear Laravel cache
 	$(SAIL) artisan view:clear;
