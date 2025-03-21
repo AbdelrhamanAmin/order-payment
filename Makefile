@@ -41,3 +41,11 @@ clean: ## Clear Laravel cache
 
 test: ## Run application tests
 	$(SAIL) artisan test;
+
+# Queue Management
+horizon:  ## Start Laravel Horizon
+	$(SAIL) artisan horizon
+
+horizon-restart:  ## Restart Laravel Horizon
+	$(SAIL) artisan horizon:terminate
+	make horizon
